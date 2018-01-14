@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 Vue.config.productionTip = false
 
@@ -11,5 +13,10 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  created () {
+    AOS.init({
+      duration: 600
+    })
+  }
 })

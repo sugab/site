@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <div class="text">
+    <div class="text" data-aos="fade-left" data-aos-delay="300">
       <span class="name boxed">{{name}}</span>
     </div>
-    <div class="text">
+    <div class="text" data-aos="fade-left" data-aos-delay="600">
       <span class="subtitle boxed">Fullstack Developer, Data Geek, and Traveller.</span>
     </div>
-    <div class="social-links">
+    <div class="social-links" data-aos="fade-left" data-aos-delay="1000">
       <span class="boxed">
         <a class="social-link" href="https://github.com/sugab" target="blank">
           <i class="fab fa-github"></i>
