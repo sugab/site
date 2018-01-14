@@ -10,8 +10,7 @@
       <div data-aos="fade-left" data-aos-delay="700">
         <div class="boxed long-text">
           <p>
-            I'm youngest <b>Senior Software Engineer</b> at EACIIT Singapore, 
-            I do beautiful magic with my codes and sometimes freelance iOS projects.
+            I'm youngest <b>Senior Software Engineer</b> at EACIIT Singapore, I do beautiful magic with my codes and sometimes freelance iOS projects.
             <br>
             I love working with data, thanks to my professor he helps me publish my first paper about machine learning.
           </p>
@@ -34,6 +33,12 @@
           <a class="social-link" href="https://www.linkedin.com/in/cahyonobagus" target="blank">
             <i class="fab fa-linkedin"></i>
             <b>linkedin</b>
+          </a>
+        </span>
+        <span class="boxed">
+          <a class="social-link" href="mailto:baguscah77@gmail.com" target="blank">
+            <i class="fas fa-envelope"></i>
+            <b>baguscah77@gmail.com</b>
           </a>
         </span>
       </div>
@@ -108,7 +113,7 @@ a {
 }
 
 @media (max-width: 540px) {
-  p.boxed {
+  .long-text {
     max-width: 100%;
     margin: 40px 0;
     font-size: 1.2em;
