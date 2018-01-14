@@ -3,8 +3,8 @@
     <div class="text">
       <span class="name boxed">{{name}}</span>
     </div>
-    <div class="subtitle">
-      <span class="boxed">Fullstack Developer, Data Geek, and Traveller.</span>
+    <div class="text">
+      <span class="subtitle boxed">Fullstack Developer, Data Geek, and Traveller.</span>
     </div>
   </div>
 </template>
@@ -25,17 +25,23 @@ export default {
 .container {
   padding: 0 20px;
   margin-top: 10%;
-  margin-left: 10%;
+  margin-right: 10%;
+  text-align: right;
 }
 
 .boxed {
   display: inline-block;
   background-color: rgba(236, 240, 241, 0.8);
-  padding: 0 10px;
+  padding: 5px 10px;
+  margin: 2px;
 }
 
 .name {
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 3em;
+}
+
+.subtitle {
+  font-size: 1.2em;
 }
 </style>
