@@ -1,45 +1,98 @@
 <template>
   <div id="app" class="bg">
+    <div class="header">
+      <ul class="menu">
+        <li v-for="item in menuItems" v-bind:key="item.path">
+          <router-link v-bind:to="item.path">{{item.title}}</router-link>
+        </li>
+      </ul>
+    </div>
+
     <router-view/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  export default {
+    name: 'app',
+    data () {
+      return {
+        menuItems: [{
+          path: '/',
+          title: 'Home'
+        },
+        {
+          path: '/resume',
+          title: 'Resume'
+        },
+        {
+          path: '/photos',
+          title: 'Photos'
+        }
+        ]
+      }
+    }
+  }
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
 
-body,
-html {
-  height: 100%;
-  margin: 0;
-}
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+  }
 
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  min-height: 640px;
-}
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-.bg {
-  background-image: url("./assets/images/bg-1.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  #app {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    min-height: 640px;
+  }
+
+  .bg {
+    background-image: url("./assets/images/bg-1.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .header {
+    height: 80px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  }
+
+  .menu {
+    margin: 0 5%;
+    padding: 0 20px;
+    float: right;
+  }
+
+  .menu li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  .menu li.active {
+    font-weight: bold;
+  }
+
 </style>
