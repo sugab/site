@@ -3,7 +3,7 @@
     <div class="header">
       <ul class="menu">
         <li v-for="item in menuItems" v-bind:key="item.path">
-          <router-link v-bind:to="item.path">{{item.title}}</router-link>
+          <router-link v-bind:to="item.path" active-class="active">{{item.title}}</router-link>
         </li>
       </ul>
     </div>
@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       menuItems: [
-        { path: '/', title: 'Home' },
+        { path: '/home', title: 'Home' },
         { path: '/resume', title: 'Resume' },
         { path: '/photos', title: 'Photos' }
       ]
@@ -83,7 +83,7 @@ a {
   color: white;
 }
 
-.menu li.active {
+.menu li a.active {
   font-weight: bold;
 }
 </style>
