@@ -5,7 +5,6 @@
         <li class="active">About</li>
         <li>Resume</li>
         <li>Photos</li>
-        <li>Blog</li>
       </ul>
     </div>
     <div class="content-container">
