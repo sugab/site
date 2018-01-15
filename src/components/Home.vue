@@ -9,10 +9,8 @@
     <div data-aos="fade-left" data-aos-delay="700">
       <div class="boxed long-text">
         <p>
-          I'm the youngest
-          <b>Senior Software Engineer</b> at EACIIT Singapore, I do beautiful magic with my codes and sometimes freelance iOS
-          projects.
-          <br> I love working with data, thanks to my professor he helps me publish my first paper about machine learning.
+          I started coding when I was 15 years old. Right now I’m the youngest <b>Senior Software Engineer</b> at EACIIT Singapore. 
+          I do beautiful magic stuff mainly using on <b>JavaScript</b>, <b>Go</b>, <b>Python</b>, and <b>Swift (iOS)</b>.
         </p>
       </div>
     </div>
@@ -101,10 +99,8 @@ export default {
   max-width: 50%;
   margin: 40px 0;
   font-size: 1.2em;
-}
-
-.long-text p {
-  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .name {
