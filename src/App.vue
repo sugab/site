@@ -5,8 +5,6 @@
 </template>
 
 <script>
-import './assets/external/fa5/js/fontawesome-all'
-
 export default {
   name: 'app'
 }

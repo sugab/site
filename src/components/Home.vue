@@ -27,25 +27,25 @@
       <div class="social-links" data-aos="fade-left" data-aos-delay="900">
         <span class="boxed">
           <a class="social-link" href="https://github.com/sugab" target="blank">
-            <i class="fab fa-github"></i>
+            <font-awesome-icon :icon="faGithub" />
             <b>github</b>
           </a>
         </span>
         <span class="boxed">
           <a class="social-link" href="https://stackoverflow.com/users/903350/bagus-cahyono" target="blank">
-            <i class="fab fa-stack-overflow"></i>
+            <font-awesome-icon :icon="faStackOverflow" />
             <b>stackoverflow</b>
           </a>
         </span>
         <span class="boxed">
           <a class="social-link" href="https://www.linkedin.com/in/cahyonobagus" target="blank">
-            <i class="fab fa-linkedin"></i>
+            <font-awesome-icon :icon="faLinkedin" />
             <b>linkedin</b>
           </a>
         </span>
         <span class="boxed">
           <a class="social-link" href="mailto:baguscah77@gmail.com" target="blank">
-            <i class="fas fa-envelope"></i>
+            <font-awesome-icon :icon="faEnvelope" />
             <b>baguscah77@gmail.com</b>
           </a>
         </span>
@@ -55,12 +55,33 @@
 </template>
 
 <script>
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import { faGithub, faStackOverflow, faLinkedin } from '@fortawesome/fontawesome-free-brands'
+import { faEnvelope } from '@fortawesome/fontawesome-free-solid'
+
 export default {
   name: 'Home',
   data () {
     return {
       name: 'Bagus Cahyono'
     }
+  },
+  computed: {
+    faGithub () {
+      return faGithub
+    },
+    faStackOverflow () {
+      return faStackOverflow
+    },
+    faLinkedin () {
+      return faLinkedin
+    },
+    faEnvelope () {
+      return faEnvelope
+    }
+  },
+  components: {
+    FontAwesomeIcon
   }
 }
 </script>
