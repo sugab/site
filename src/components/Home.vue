@@ -2,9 +2,15 @@
   <div>
     <div class="header">
       <ul class="menu">
-        <li class="active">About</li>
-        <li>Resume</li>
-        <li>Photos</li>
+        <li class="active">
+          <router-link to="/">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/resume">Resume</router-link>
+        </li>
+        <li>
+          <router-link to="/photos">Photos</router-link>
+        </li>
       </ul>
     </div>
     <div class="content-container">
