@@ -1,5 +1,13 @@
 <template>
   <div>
+    <div class="header">
+      <ul class="menu">
+        <li class="active">About</li>
+        <li>Resume</li>
+        <li>Photos</li>
+        <li>Blog</li>
+      </ul>
+    </div>
     <div class="content-container">
       <div class="text" data-aos="fade-left" data-aos-delay="300">
         <span class="name boxed">{{name}}</span>
@@ -10,7 +18,7 @@
       <div data-aos="fade-left" data-aos-delay="700">
         <div class="boxed long-text">
           <p>
-            I'm youngest <b>Senior Software Engineer</b> at EACIIT Singapore, I do beautiful magic with my codes and sometimes freelance iOS projects.
+            I'm the youngest <b>Senior Software Engineer</b> at EACIIT Singapore, I do beautiful magic with my codes and sometimes freelance iOS projects.
             <br>
             I love working with data, thanks to my professor he helps me publish my first paper about machine learning.
           </p>
@@ -64,10 +72,32 @@ a {
   color: inherit;
 }
 
+.header {
+  height: 80px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+
+.menu {
+  margin: 0 5%;
+  padding: 0 20px;
+  float: right;
+}
+
+.menu li {
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+  color: white;
+}
+
+.menu li.active {
+  font-weight: bold;
+}
+
 .content-container {
   padding: 0 20px;
   margin: 0 5%;
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: right;
 }
 
@@ -119,5 +149,4 @@ a {
     font-size: 1.2em;
   }
 }
-
 </style>
