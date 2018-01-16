@@ -92,6 +92,12 @@ a {
 }
 
 .content-container {
+  position: relative;
+}
+
+.content-wrapper {
+  position: absolute;
+  top: 0;
   padding: 0 20px;
   margin: 0 5%;
   margin-top: 5%;

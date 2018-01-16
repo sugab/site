@@ -1,54 +1,56 @@
 <template>
-  <div>
-    <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
-      <div class="text" v-if="shows[0]">
-        <span class="name boxed">{{name}}</span>
-      </div>
-    </transition>
-    <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
-      <div class="text" v-if="shows[1]">
-        <span class="subtitle boxed">Fullstack Developer, Data Geek, and Traveller</span>
-      </div>
-    </transition>
-    <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
-      <div v-if="shows[2]">
-        <div class="boxed long-text">
-          <p>
-            I started coding when I was 15 years old. Right now I’m the youngest <b>Senior Software Engineer</b> at EACIIT Singapore. 
-            I do beautiful magic stuff mainly using on <b>JavaScript</b>, <b>Go</b>, <b>Python</b>, and <b>Swift (iOS)</b>.
-          </p>
+  <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+    <div class="content-wrapper">
+      <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+        <div class="text" v-if="shows[0]">
+          <span class="name boxed">{{name}}</span>
         </div>
-      </div>
-    </transition>
-    <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
-      <div class="social-links" v-if="shows[3]">
-        <span class="boxed">
-          <a class="social-link" href="https://github.com/sugab" target="blank">
-            <font-awesome-icon :icon="faGithub" />
-            <b>github</b>
-          </a>
-        </span>
-        <span class="boxed">
-          <a class="social-link" href="https://stackoverflow.com/users/903350/bagus-cahyono" target="blank">
-            <font-awesome-icon :icon="faStackOverflow" />
-            <b>stackoverflow</b>
-          </a>
-        </span>
-        <span class="boxed">
-          <a class="social-link" href="https://www.linkedin.com/in/cahyonobagus" target="blank">
-            <font-awesome-icon :icon="faLinkedin" />
-            <b>linkedin</b>
-          </a>
-        </span>
-        <span class="boxed">
-          <a class="social-link" href="mailto:baguscah77@gmail.com" target="blank">
-            <font-awesome-icon :icon="faEnvelope" />
-            <b>baguscah77@gmail.com</b>
-          </a>
-        </span>
-      </div>
-    </transition>    
-  </div>
+      </transition>
+      <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+        <div class="text" v-if="shows[1]">
+          <span class="subtitle boxed">Fullstack Developer, Data Geek, and Traveller</span>
+        </div>
+      </transition>
+      <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+        <div v-if="shows[2]">
+          <div class="boxed long-text">
+            <p>
+              I started coding when I was 15 years old. Right now I’m the youngest <b>Senior Software Engineer</b> at EACIIT Singapore. 
+              I do beautiful magic stuff mainly using on <b>JavaScript</b>, <b>Go</b>, <b>Python</b>, and <b>Swift (iOS)</b>.
+            </p>
+          </div>
+        </div>
+      </transition>
+      <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+        <div class="social-links" v-if="shows[3]">
+          <span class="boxed">
+            <a class="social-link" href="https://github.com/sugab" target="blank">
+              <font-awesome-icon :icon="faGithub" />
+              <b>github</b>
+            </a>
+          </span>
+          <span class="boxed">
+            <a class="social-link" href="https://stackoverflow.com/users/903350/bagus-cahyono" target="blank">
+              <font-awesome-icon :icon="faStackOverflow" />
+              <b>stackoverflow</b>
+            </a>
+          </span>
+          <span class="boxed">
+            <a class="social-link" href="https://www.linkedin.com/in/cahyonobagus" target="blank">
+              <font-awesome-icon :icon="faLinkedin" />
+              <b>linkedin</b>
+            </a>
+          </span>
+          <span class="boxed">
+            <a class="social-link" href="mailto:baguscah77@gmail.com" target="blank">
+              <font-awesome-icon :icon="faEnvelope" />
+              <b>baguscah77@gmail.com</b>
+            </a>
+          </span>
+        </div>
+      </transition>   
+    </div> 
+  </transition>
 </template>
 
 <script>
@@ -102,9 +104,7 @@ export default {
 
       if (typeof callback === 'function') {
         promise.then(() => {
-          setTimeout(() => {
-            callback()
-          }, 500)
+          callback()
         })
       }
     }

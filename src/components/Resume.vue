@@ -1,8 +1,12 @@
 <template>
-  <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">>
-    <div v-if="shows[0]">
-      <span class="boxed">This is resume bro!</span>
-    </div>  
+  <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+    <div class="content-wrapper">
+      <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+        <div v-if="shows[0]">
+          <span class="boxed">This is resume bro!</span>
+        </div>
+      </transition>  
+    </div>
   </transition>
 </template>
 
@@ -30,9 +34,7 @@ export default {
 
       if (typeof callback === 'function') {
         promise.then(() => {
-          setTimeout(() => {
-            callback()
-          }, 500)
+          callback()
         })
       }
     }
