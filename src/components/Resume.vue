@@ -3,7 +3,18 @@
     <div class="content-wrapper">
       <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
         <div v-if="shows[0]">
-          <span class="boxed">This is resume bro!</span>
+          <span class="title boxed">I'm still working on it.</span>
+        </div>
+      </transition>  
+      <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+        <div v-if="shows[1]">
+          <span class="subtitle boxed">
+            Meanwhile go to 
+            <a class="social-link" href="https://www.linkedin.com/in/cahyonobagus" target="blank">
+              <b>my LinkedIn profile</b>
+            </a>
+            instead :)
+          </span>
         </div>
       </transition>  
     </div>
@@ -14,7 +25,7 @@
 export default {
   data () {
     return {
-      shows: [false]
+      shows: [false, false]
     }
   },
   methods: {

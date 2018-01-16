@@ -98,9 +98,18 @@ a {
 .content-wrapper {
   position: absolute;
   top: 0;
-  padding: 0 20px;
-  margin: 0 5%;
-  margin-top: 5%;
+  left: 0;
+  right: 0;
+  padding: 5%;
   text-align: right;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.subtitle {
+  font-size: 1.2em;
 }
 </style>

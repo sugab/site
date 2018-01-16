@@ -3,7 +3,7 @@
     <div class="content-wrapper">
       <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
         <div class="text" v-if="shows[0]">
-          <span class="name boxed">{{name}}</span>
+          <span class="title boxed">{{name}}</span>
         </div>
       </transition>
       <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
@@ -134,15 +134,6 @@ export default {
   font-size: 1.2em;
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.name {
-  font-weight: bold;
-  font-size: 3em;
-}
-
-.subtitle {
-  font-size: 1.2em;
 }
 
 .social-link {
