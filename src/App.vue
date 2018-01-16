@@ -8,11 +8,15 @@
       </ul>
     </div>
 
-    <router-view/>
+    <div class="content-container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
+import 'animate.css/animate.min.css'
+
 export default {
   name: 'app',
   data () {
@@ -85,5 +89,12 @@ a {
 
 .menu li a.active {
   font-weight: bold;
+}
+
+.content-container {
+  padding: 0 20px;
+  margin: 0 5%;
+  margin-top: 5%;
+  text-align: right;
 }
 </style>

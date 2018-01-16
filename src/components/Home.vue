@@ -1,45 +1,53 @@
 <template>
-  <div class="content-container">
-    <div class="text" data-aos="fade-left" data-aos-delay="300">
-      <span class="name boxed">{{name}}</span>
-    </div>
-    <div class="text" data-aos="fade-left" data-aos-delay="500">
-      <span class="subtitle boxed">Fullstack Developer, Data Geek, and Traveller</span>
-    </div>
-    <div data-aos="fade-left" data-aos-delay="700">
-      <div class="boxed long-text">
-        <p>
-          I started coding when I was 15 years old. Right now I’m the youngest <b>Senior Software Engineer</b> at EACIIT Singapore. 
-          I do beautiful magic stuff mainly using on <b>JavaScript</b>, <b>Go</b>, <b>Python</b>, and <b>Swift (iOS)</b>.
-        </p>
+  <div>
+    <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+      <div class="text" v-if="shows[0]">
+        <span class="name boxed">{{name}}</span>
       </div>
-    </div>
-    <div class="social-links" data-aos="fade-left" data-aos-delay="900">
-      <span class="boxed">
-        <a class="social-link" href="https://github.com/sugab" target="blank">
-          <font-awesome-icon :icon="faGithub" />
-          <b>github</b>
-        </a>
-      </span>
-      <span class="boxed">
-        <a class="social-link" href="https://stackoverflow.com/users/903350/bagus-cahyono" target="blank">
-          <font-awesome-icon :icon="faStackOverflow" />
-          <b>stackoverflow</b>
-        </a>
-      </span>
-      <span class="boxed">
-        <a class="social-link" href="https://www.linkedin.com/in/cahyonobagus" target="blank">
-          <font-awesome-icon :icon="faLinkedin" />
-          <b>linkedin</b>
-        </a>
-      </span>
-      <span class="boxed">
-        <a class="social-link" href="mailto:baguscah77@gmail.com" target="blank">
-          <font-awesome-icon :icon="faEnvelope" />
-          <b>baguscah77@gmail.com</b>
-        </a>
-      </span>
-    </div>
+    </transition>
+    <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+      <div class="text" v-if="shows[1]">
+        <span class="subtitle boxed">Fullstack Developer, Data Geek, and Traveller</span>
+      </div>
+    </transition>
+    <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+      <div v-if="shows[2]">
+        <div class="boxed long-text">
+          <p>
+            I started coding when I was 15 years old. Right now I’m the youngest <b>Senior Software Engineer</b> at EACIIT Singapore. 
+            I do beautiful magic stuff mainly using on <b>JavaScript</b>, <b>Go</b>, <b>Python</b>, and <b>Swift (iOS)</b>.
+          </p>
+        </div>
+      </div>
+    </transition>
+    <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+      <div class="social-links" v-if="shows[3]">
+        <span class="boxed">
+          <a class="social-link" href="https://github.com/sugab" target="blank">
+            <font-awesome-icon :icon="faGithub" />
+            <b>github</b>
+          </a>
+        </span>
+        <span class="boxed">
+          <a class="social-link" href="https://stackoverflow.com/users/903350/bagus-cahyono" target="blank">
+            <font-awesome-icon :icon="faStackOverflow" />
+            <b>stackoverflow</b>
+          </a>
+        </span>
+        <span class="boxed">
+          <a class="social-link" href="https://www.linkedin.com/in/cahyonobagus" target="blank">
+            <font-awesome-icon :icon="faLinkedin" />
+            <b>linkedin</b>
+          </a>
+        </span>
+        <span class="boxed">
+          <a class="social-link" href="mailto:baguscah77@gmail.com" target="blank">
+            <font-awesome-icon :icon="faEnvelope" />
+            <b>baguscah77@gmail.com</b>
+          </a>
+        </span>
+      </div>
+    </transition>    
   </div>
 </template>
 
@@ -56,7 +64,8 @@ export default {
   name: 'Home',
   data () {
     return {
-      name: 'Bagus Cahyono'
+      name: 'Bagus Cahyono',
+      shows: [false, false, false, false]
     }
   },
   computed: {
@@ -75,19 +84,43 @@ export default {
   },
   components: {
     FontAwesomeIcon
+  },
+  methods: {
+    sequenceShow (show, callback) {
+      var promise = Promise.resolve()
+
+      for (const i of this.shows.keys()) {
+        promise = promise.then(() => {
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              this.$set(this.shows, i, show)
+              resolve()
+            }, 100)
+          })
+        })
+      }
+
+      if (typeof callback === 'function') {
+        promise.then(() => {
+          setTimeout(() => {
+            callback()
+          }, 500)
+        })
+      }
+    }
+  },
+  mounted () {
+    this.sequenceShow(true)
+  },
+  beforeRouteLeave (to, from, next) {
+    this.sequenceShow(false, function () {
+      next()
+    })
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.content-container {
-  padding: 0 20px;
-  margin: 0 5%;
-  margin-top: 5%;
-  text-align: right;
-}
-
 .boxed {
   display: inline-block;
   background-color: rgba(236, 240, 241, 0.8);
