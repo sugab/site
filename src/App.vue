@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import './assets/external/bootstrap/bootstrap.min.css'
 import 'animate.css/animate.min.css'
 
 export default {
@@ -32,24 +33,19 @@ export default {
 </script>
 
 <style>
-* {
+body, 
+html {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
+  height: 100%;
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
 }
 
-body,
-html {
-  height: 100%;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
+a, a:hover {
   color: inherit;
 }
 
@@ -85,7 +81,7 @@ a {
   list-style: none;
   padding: 10px 20px;
   color: white;
-  width: 50px;
+  width: 80px;
 }
 
 .menu li a.active {
@@ -101,8 +97,6 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  padding: 5%;
-  text-align: right;
 }
 
 .title {

@@ -121,6 +121,11 @@ export default {
 </script>
 
 <style scoped>
+.content-wrapper {
+  padding: 5%;
+  text-align: right;
+}
+
 .boxed {
   display: inline-block;
   background-color: rgba(236, 240, 241, 0.8);
