@@ -181,7 +181,7 @@ ul.dashed > li:before {
 }
 
 .content-wrapper {
-  padding: 0 1%;
+  padding: 0 20px;
   text-align: left;
 }
 
