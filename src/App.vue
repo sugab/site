@@ -85,6 +85,7 @@ a {
   list-style: none;
   padding: 10px 20px;
   color: white;
+  width: 50px;
 }
 
 .menu li a.active {
