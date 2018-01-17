@@ -32,21 +32,16 @@ export default {
 }
 </script>
 
-<style>
-body, 
+<style lang="scss">
+body,
 html {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
   height: 100%;
-  font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-}
-
-a, a:hover {
-  color: inherit;
 }
 
 #app {
@@ -55,6 +50,7 @@ a, a:hover {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   min-height: 640px;
+  font-size: 1.2em;
 }
 
 .bg {
@@ -65,46 +61,57 @@ a, a:hover {
   background-size: cover;
 }
 
-.header {
-  height: 80px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
-}
+#app {
+  a,
+  a:hover {
+    color: inherit;
+  }
 
-.menu {
-  margin: 0 5%;
-  padding: 0 20px;
-  float: right;
-}
+  p {
+    margin: 0;
+  }
 
-.menu li {
-  display: inline-block;
-  list-style: none;
-  padding: 10px 20px;
-  color: white;
-  width: 80px;
-}
+  .header {
+    height: 80px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  }
 
-.menu li a.active {
-  font-weight: bold;
-}
+  .menu {
+    margin: 0 5%;
+    padding: 0 20px;
+    float: right;
+  }
 
-.content-container {
-  position: relative;
-}
+  .menu li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px 20px;
+    color: white;
+    width: 80px;
+  }
 
-.content-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
+  .menu li a.active {
+    font-weight: bold;
+  }
 
-.title {
-  font-weight: bold;
-  font-size: 3em;
-}
+  .content-container {
+    position: relative;
+  }
 
-.subtitle {
-  font-size: 1.2em;
+  .content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 3em;
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+  }
 }
 </style>
