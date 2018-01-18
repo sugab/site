@@ -23,7 +23,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <ul class="dashed">
+          <ul class="clear">
             <li>Lead development team to complete the software development requirements in a limited time frame and worked closely with Business Analyst and SME to ensure correct business logic, interactive UI, delivered the project with a short turn around</li>
             <li>Imported reports into platform and converted the same into raw data</li>
             <li>Wrote extensive test cases to ensure that the application is ready before the go-live date</li>
@@ -54,7 +54,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <ul class="dashed">
+          <ul class="clear">
             <li>Responsible for building, handling, and maintenance of all iOS project</li>
             <li>Worked closely with CTO to analyze requirement into milestone and reasonable timeline</li>
             <li>Ensure information result validity, system stability, and data correctness to meet client’s expectation</li>
@@ -81,7 +81,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <span>Worked on the below Projects:</span>
-          <ul class="dashed">
+          <ul class="clear">
             <li>GIS Application requested by Directorate General of Land Transportation Indonesia</li>
             <li>Patient Medical Data Storing Application requested by Medical Doctor Network Indonesia</li>
             <li>Harbor Reporting Application requested by Directorate of Traffic and Sea Transportation Indonesia</li>
@@ -147,13 +147,13 @@ h2 {
   margin-top: 0;
 }
 
-ul.dashed {
+ul.clear {
   margin-top: 0;
   padding: 0;
   list-style-type: none;
 }
 
-ul.dashed > li {
+ul > li {
   padding-bottom: 20px;
   text-align: justify;
 }
