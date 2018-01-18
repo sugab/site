@@ -51,6 +51,7 @@ html {
   color: #2c3e50;
   min-height: 640px;
   font-size: 1.2em;
+  overflow-x: hidden;
 }
 
 .bg {
