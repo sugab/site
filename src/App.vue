@@ -115,9 +115,11 @@ html {
   .menu li {
     display: inline-block;
     list-style: none;
-    padding: 12px 20px;
+    padding: 11px 20px;
     color: white;
     width: 100px;
+    transition: color 1s;
+    border-top: 2px solid transparent;
   }
 
   .menu li.active {
