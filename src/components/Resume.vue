@@ -97,7 +97,7 @@
 export default {
   data () {
     return {
-      shows: [false, false, false, false]
+      shows: []
     }
   },
   methods: {
