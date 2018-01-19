@@ -1,6 +1,14 @@
 <template>
   <div id="app" class="bg">
     <div class="header" :class="{light: lightHeader}">
+      <transition enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
+        <div class="header-bg" v-show="!lightHeader">
+        </div>
+      </transition>
+      <transition enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
+        <div class="header-bg-light" v-show="lightHeader">
+        </div>
+      </transition>
       <ul class="menu">
         <router-link v-for="item in menuItems" :key="item.path" :to="item.path" tag="li" active-class="active">
           <a>{{item.title}}</a>
@@ -76,20 +84,32 @@ html {
   }
 
   .header {
-    height: 80px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
-    transition: all 1s;
+    height: 49px;
+    transition: height 1s;
   }
 
-  .header.light {
+  .header-bg, .header-bg-light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .header-bg {
+    height: 80px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  }
+
+  .header-bg-light {
     height: 49px;
     background: #FAFAFA;
   }
 
   .menu {
+    position: absolute;
+    right: 0;
     margin: 0 5%;
     padding: 0 20px;
-    float: right;
   }
 
   .menu li {
