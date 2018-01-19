@@ -121,6 +121,10 @@ export default {
 </script>
 
 <style scoped>
+p {
+  margin: 0;
+}
+
 .content-wrapper {
   padding: 5%;
   text-align: right;

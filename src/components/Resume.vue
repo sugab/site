@@ -89,6 +89,56 @@
           </ul>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-1">
+          <span class="section-title">Education</span>
+        </div>
+        <div class="col-md-6">
+          <span class="float-right">
+            <img class="company-logo" src="../assets/images/resume/telu-logo.png" alt="">
+          </span>
+          <h1>Telkom University</h1>
+          <h2>Bachelor of Computer Science (B.Sc.)</h2>
+        </div>
+        <div class="col-md-3">
+          <div class="right-content">
+            <div>
+              <b>Bandung, Indonesia</b>
+            </div>
+            <div>Aug 2013 - Jan 2017</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <ul class="clear">
+            <li>Specialization in Machine Learning and Image Processing</li>
+            <li>Research focus on PCO classification based on ultrasound image using Convolutional Neural Network and Speech recognition and classification of hijaiyah letter with haraakat with Prof. Adiwijaya and M. Syahrul Mubarok M. Sc.</li>
+            <li>Publish machine learning paper on IEEE and present it at ICOICT 2017 Malaysia</li>
+            <li>Received full scholarship to pursue my specialization</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-1">
+          <span class="section-title">Skills</span>
+        </div>
+        <div class="col-md-6">
+          <h1>Language</h1>
+          <p>
+            Native in Bahasa Indonesia, fluent in English
+          </p>
+          <h1>Technology</h1>
+          <p>
+            Proficient in iOS Development using Swift, MongoDB, SQL Database, 
+            JavaScript, Python, Go, Machine Learning, and Image Processing
+          </p>
+          <h1>Hobbies</h1>
+          <p>
+            Trekking, travelling, and adventure
+          </p>
+        </div>
+      </div>
     </div>
   </transition>
 </template>
@@ -144,6 +194,11 @@ h1 {
 
 h2 {
   margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 ul.clear {

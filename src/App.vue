@@ -75,10 +75,6 @@ html {
     text-decoration: none;
   }
 
-  p {
-    margin: 0;
-  }
-
   .header {
     height: 80px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
