@@ -5,7 +5,9 @@
         <transition-group enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
           <div class="masonry-layout-panel" v-for="photo in photos" :key="photo.link">
             <div class="masonry-layout-panel__content">
-              <img :src="photo.media.o" />
+              <a :href="photo.link" target="_blank">
+                <img :src="photo.media.o" />
+              </a>
               <h3>{{ photo.title }}</h3>
               <p>{{ photo.descriptionText }}</p>
             </div>
@@ -87,7 +89,7 @@ export default {
   background-color: white;
 }
 
-.masonry-layout-panel__content > img {
+.masonry-layout-panel__content > a > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
