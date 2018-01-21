@@ -69,7 +69,19 @@ html {
   color: #2c3e50;
   min-height: 640px;
   height: 100%;
-  font-size: 1.2em;
+  font-size: 1em;
+
+  @media screen and (min-width: 400px) {
+    font-size: 0.8em;
+  }
+  
+  @media screen and (min-width: 600px) {
+    font-size: 1em;
+  }
+  
+  @media screen and (min-width: 800px) {
+    font-size: 1.2em;
+  }
 }
 
 #app {
@@ -100,7 +112,7 @@ html {
 
   .header {
     position: relative;
-    height: 49px;
+    height: 3em;
     transition: height 1s;
   }
 
@@ -117,7 +129,7 @@ html {
   }
 
   .header-bg-light {
-    height: 49px;
+    height: 3em;
     background: #FAFAFA;
   }
 
@@ -125,15 +137,13 @@ html {
     position: absolute;
     right: 0;
     margin: 0 5%;
-    padding: 0 20px;
   }
 
   .menu li {
     display: inline-block;
     list-style: none;
-    padding: 11px 20px;
+    padding: 0.5em 1em;
     color: white;
-    width: 100px;
     transition: color 1s;
     border-top: 2px solid transparent;
   }
@@ -148,8 +158,7 @@ html {
   }
 
   .header.light .menu li.active {
-    border-top: none;
-    border-bottom: 1px solid #6C7A89;
+    border-top: 2px solid #6C7A89;
   }
 
   .content-container {

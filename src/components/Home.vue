@@ -159,4 +159,12 @@ p {
 .social-link:hover > b {
   max-width: 200px;
 }
+
+@media (max-width: 540px) {
+  .long-text {
+    max-width: 100%;
+    margin: 40px 0;
+    font-size: 1.2em;
+  }
+}
 </style>
