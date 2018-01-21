@@ -49,14 +49,31 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 * {
   box-sizing: border-box;
 }
 
 .masonry-layout {
-  column-count: 5;
+  column-count: 1;
   column-gap: 0;
+  counter-reset: item-counter;
+  
+  @media screen and (min-width: 400px) {
+    column-count: 2;
+  }
+  
+  @media screen and (min-width: 600px) {
+    column-count: 3;
+  }
+  
+  @media screen and (min-width: 800px) {
+    column-count: 4;
+  }
+  
+  @media screen and (min-width: 1100px) {
+    column-count: 5;
+  }
 }
 
 .masonry-layout-panel {
