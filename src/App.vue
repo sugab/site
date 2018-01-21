@@ -1,23 +1,27 @@
 <template>
-  <div id="app" class="bg">
-    <div class="header" :class="{light: lightHeader}">
-      <transition enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
-        <div class="header-bg" v-show="!lightHeader">
-        </div>
-      </transition>
-      <transition enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
-        <div class="header-bg-light" v-show="lightHeader">
-        </div>
-      </transition>
-      <ul class="menu">
-        <router-link v-for="item in menuItems" :key="item.path" :to="item.path" tag="li" active-class="active">
-          <a>{{item.title}}</a>
-        </router-link>
-      </ul>
+  <div id="app">
+    <div class="bg">
     </div>
+    <div class="app-wrapper">
+      <div class="header" :class="{light: lightHeader}">
+        <transition enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
+          <div class="header-bg" v-show="!lightHeader">
+          </div>
+        </transition>
+        <transition enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
+          <div class="header-bg-light" v-show="lightHeader">
+          </div>
+        </transition>
+        <ul class="menu">
+          <router-link v-for="item in menuItems" :key="item.path" :to="item.path" tag="li" active-class="active">
+            <a>{{item.title}}</a>
+          </router-link>
+        </ul>
+      </div>
 
-    <div class="content-container">
-      <router-view></router-view>
+      <div class="content-container">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
@@ -56,7 +60,6 @@ html {
   height: 100%;
   vertical-align: baseline;
   background: transparent;
-  overflow-x: hidden;
 }
 
 #app {
@@ -65,15 +68,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   min-height: 640px;
-  font-size: 1.2em;
-}
-
-.bg {
-  background-image: url("./assets/images/bg-1.jpg");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  font-size: 1.2em;
 }
 
 #app {
@@ -83,7 +79,27 @@ html {
     text-decoration: none;
   }
 
+  .app-wrapper {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("https://farm5.staticflickr.com/4766/39796659631_f58963260e_k.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .header {
+    position: relative;
     height: 49px;
     transition: height 1s;
   }
