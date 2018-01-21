@@ -1,14 +1,16 @@
 <template>
-  <transition>
+  <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
     <div>
       <div class="masonry-layout">
-        <div class="masonry-layout-panel" v-for="photo in photos" :key="photo.link">
-          <div class="masonry-layout-panel__content">
-            <img :src="photo.media.m" />
-            <h3>{{ photo.title }}</h3>
-            <p>{{ photo.descriptionText }}</p>
+        <transition-group enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
+          <div class="masonry-layout-panel" v-for="photo in photos" :key="photo.link">
+            <div class="masonry-layout-panel__content">
+              <img :src="photo.media.m" />
+              <h3>{{ photo.title }}</h3>
+              <p>{{ photo.descriptionText }}</p>
+            </div>
           </div>
-        </div>
+        </transition-group>
       </div>
     </div>
   </transition>
@@ -36,6 +38,13 @@ export default {
         this.photos = photos
       }
     })
+  },
+  beforeRouteLeave (to, from, next) {
+    this.photos = []
+
+    setTimeout(() => {
+      next()
+    }, 600)
   }
 }
 </script>
