@@ -24,25 +24,25 @@
       <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
         <div class="social-links" v-if="shows[3]">
           <span class="boxed">
-            <a class="social-link" href="https://github.com/sugab" target="blank">
+            <a class="social-link" href="https://github.com/sugab" target="_blank">
               <font-awesome-icon :icon="faGithub" />
               <b>github</b>
             </a>
           </span>
           <span class="boxed">
-            <a class="social-link" href="https://stackoverflow.com/users/903350/bagus-cahyono" target="blank">
+            <a class="social-link" href="https://stackoverflow.com/users/903350/bagus-cahyono" target="_blank">
               <font-awesome-icon :icon="faStackOverflow" />
               <b>stackoverflow</b>
             </a>
           </span>
           <span class="boxed">
-            <a class="social-link" href="https://www.linkedin.com/in/cahyonobagus" target="blank">
+            <a class="social-link" href="https://www.linkedin.com/in/cahyonobagus" target="_blank">
               <font-awesome-icon :icon="faLinkedin" />
               <b>linkedin</b>
             </a>
           </span>
           <span class="boxed">
-            <a class="social-link" href="mailto:baguscah77@gmail.com" target="blank">
+            <a class="social-link" href="mailto:baguscah77@gmail.com" target="_blank">
               <font-awesome-icon :icon="faEnvelope" />
               <b>baguscah77@gmail.com</b>
             </a>
