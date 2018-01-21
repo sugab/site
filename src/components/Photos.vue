@@ -5,7 +5,7 @@
         <transition-group enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
           <div class="masonry-layout-panel" v-for="photo in photos" :key="photo.link">
             <div class="masonry-layout-panel__content">
-              <img :src="photo.media.m" />
+              <img :src="photo.media.o" />
               <h3>{{ photo.title }}</h3>
               <p>{{ photo.descriptionText }}</p>
             </div>
@@ -31,6 +31,7 @@ export default {
         var photos = data.items.map(e => {
           let lastIndex = e.description.lastIndexOf('<p>')
           e.descriptionText = e.description.substring(lastIndex + 3, e.description.length - 4)
+          e.media.o = e.media.m.substr(0, e.media.m.length - 6) + e.media.m.substr(e.media.m.length - 4, e.media.m.length)
 
           return e
         })
