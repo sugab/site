@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="bg">
+    <div class="bg" :class="{tinted: tinted}">
     </div>
     <div class="app-wrapper">
       <div class="header" :class="{light: lightHeader}">
@@ -35,6 +35,7 @@ export default {
   data () {
     return {
       lightHeader: false,
+      tinted: false,
       menuItems: [
         { path: '/home', title: 'Home' },
         { path: '/resume', title: 'Resume' },
@@ -43,8 +44,9 @@ export default {
     }
   },
   watch: {
-    '$route' (value) {
+    $route (value) {
       this.lightHeader = value.path === '/resume'
+      this.tinted = value.path === '/photos'
     }
   }
 }
@@ -72,13 +74,13 @@ html {
   font-size: 1em;
 
   @media screen and (min-width: 400px) {
-    font-size: 0.8em;
-  }
-  
-  @media screen and (min-width: 600px) {
     font-size: 1em;
   }
-  
+
+  @media screen and (min-width: 600px) {
+    font-size: 1.1em;
+  }
+
   @media screen and (min-width: 800px) {
     font-size: 1.2em;
   }
@@ -108,6 +110,20 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background 1s;
+  }
+
+  .bg::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s;
+  }
+
+  .bg.tinted::after {
+    background: rgba(0, 0, 0, 0.5);
   }
 
   .header {
@@ -116,7 +132,8 @@ html {
     transition: height 1s;
   }
 
-  .header-bg, .header-bg-light {
+  .header-bg,
+  .header-bg-light {
     position: absolute;
     top: 0;
     left: 0;
@@ -130,7 +147,7 @@ html {
 
   .header-bg-light {
     height: 3em;
-    background: #FAFAFA;
+    background: #fafafa;
   }
 
   .menu {
@@ -142,7 +159,7 @@ html {
   .menu li {
     display: inline-block;
     list-style: none;
-    padding: 0.5em 1em;
+    padding: 0.6em 1em;
     color: white;
     transition: color 1s;
     border-top: 2px solid transparent;
@@ -154,11 +171,11 @@ html {
   }
 
   .header.light .menu li {
-    color: #6C7A89;
+    color: #6c7a89;
   }
 
   .header.light .menu li.active {
-    border-top: 2px solid #6C7A89;
+    border-top: 2px solid #6c7a89;
   }
 
   .content-container {
