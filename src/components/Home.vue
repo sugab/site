@@ -16,7 +16,7 @@
           <div class="boxed long-text">
             <p>
               I started coding when I was 15 years old. Right now I’m the youngest <b>Senior Software Engineer</b> at EACIIT Singapore. 
-              I do beautiful magic stuff mainly using on <b>JavaScript</b>, <b>Go</b>, <b>Python</b>, and <b>Swift (iOS)</b>.
+              I do beautiful magic stuff mainly using <b>JavaScript</b>, <b>Go</b>, <b>Python</b>, and <b>Swift (iOS)</b>.
             </p>
           </div>
         </div>
