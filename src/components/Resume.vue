@@ -123,9 +123,38 @@
         <div class="col-md-2 col-md-offset-1">
           <span class="section-title">Achievement</span>
         </div>
-        <div class="col-md-6">
-          Dummy text
-        </div> 
+        <div class="col-md-3">
+          <div>
+            <h3>2016</h3>
+            <p>1st Winner AMICTA Health and Wellbeing Apps</p>
+          </div>
+          <div>
+            <h3>2015</h3>
+            <p>1st Winner Hackathon Merdeka 2.0 Indonesia Bandung Region</p>
+            <p>1st Winner Grand Final Hackathon Merdeka 2.0 Indonesia</p>
+          </div>
+          <div>
+            <h3>2014</h3>
+            <p>Nominator INAICTA 2014 Games Competition</p>
+          </div>
+          <div>
+            <h3>2013</h3>
+            <p>2nd Winner SISFOTIME Web Design Competition</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div>
+            <h3>2012</h3>
+            <p>3rd Winner CISCO CCENT NetRider Indonesia</p>
+            <p>Completion of Oracle 10g 2 Day DBA </p>
+            <p>1st Winner Ma-Chung Algorithm Competition</p>
+          </div>
+          <div>
+            <h3>2011</h3>
+            <p>1st Winner LKS Software Application Competition Indonesia</p>
+            <p>2nd Winner STIKI Student Programming Competition</p>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-2 col-md-offset-1">
@@ -200,7 +229,7 @@ h1 {
   margin: 0;
 }
 
-h2 {
+h2, h3 {
   margin-top: 0;
 }
 
