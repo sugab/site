@@ -11,5 +11,6 @@ deploy:
   provider: surge
   skip_cleanup: true
   domain: www.baguscahyono.com
+  project: ./dist/
 
 
