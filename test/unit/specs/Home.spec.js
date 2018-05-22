@@ -5,7 +5,7 @@ describe('Home.vue', () => {
   it('should render correct contents', () => {
     const Constructor = Vue.extend(Home)
     const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('.name').textContent)
+    expect(vm.$data.name)
     .toEqual('Bagus Cahyono')
   })
 })
