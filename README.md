@@ -1,5 +1,7 @@
 # site
 
+[![Build Status](https://travis-ci.com/sugab/site.svg?branch=master)](https://travis-ci.com/sugab/site)
+
 > My personal website project
 
 ## Build Setup
