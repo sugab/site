@@ -121,6 +121,14 @@
       </div>
       <div class="row">
         <div class="col-md-2 col-md-offset-1">
+          <span class="section-title">Achievement</span>
+        </div>
+        <div class="col-md-6">
+          Dummy text
+        </div> 
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-1">
           <span class="section-title">Skills</span>
         </div>
         <div class="col-md-6">
