@@ -123,36 +123,12 @@
         <div class="col-md-2 col-md-offset-1">
           <span class="section-title">Achievement</span>
         </div>
-        <div class="col-md-3">
-          <div>
-            <h3>2016</h3>
-            <p>1st Winner AMICTA Health and Wellbeing Apps</p>
-          </div>
-          <div>
-            <h3>2015</h3>
-            <p>1st Winner Hackathon Merdeka 2.0 Indonesia Bandung Region</p>
-            <p>1st Winner Grand Final Hackathon Merdeka 2.0 Indonesia</p>
-          </div>
-          <div>
-            <h3>2014</h3>
-            <p>Nominator INAICTA 2014 Games Competition</p>
-          </div>
-          <div>
-            <h3>2013</h3>
-            <p>2nd Winner SISFOTIME Web Design Competition</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div>
-            <h3>2012</h3>
-            <p>3rd Winner CISCO CCENT NetRider Indonesia</p>
-            <p>Completion of Oracle 10g 2 Day DBA </p>
-            <p>1st Winner Ma-Chung Algorithm Competition</p>
-          </div>
-          <div>
-            <h3>2011</h3>
-            <p>1st Winner LKS Software Application Competition Indonesia</p>
-            <p>2nd Winner STIKI Student Programming Competition</p>
+        <div class="col-md-6">
+          <div class="col-md-6 no-padding" v-for="(achievement, index) in achievements" :key="index">
+            <h3>{{ achievement.year }}</h3>
+            <p v-for="(desc, index) in achievement.descriptions" :key="index">
+              {{ desc }}
+            </p>
           </div>
         </div>
       </div>
@@ -184,7 +160,49 @@
 export default {
   data () {
     return {
-      shows: []
+      shows: [],
+      achievements: [
+        {
+          year: 2016,
+          descriptions: [
+            '1st Winner AMICTA Health and Wellbeing Apps'
+          ]
+        },
+        {
+          year: 2015,
+          descriptions: [
+            '1st Winner Grand Final Hackathon Merdeka 2.0 Indonesia',
+            '1st Winner Hackathon Merdeka 2.0 Indonesia Bandung Region'
+          ]
+        },
+        {
+          year: 2014,
+          descriptions: [
+            'Nominator INAICTA 2014 Games Competition'
+          ]
+        },
+        {
+          year: 2013,
+          descriptions: [
+            '2nd Winner SISFOTIME Web Design Competition'
+          ]
+        },
+        {
+          year: 2012,
+          descriptions: [
+            '3rd Winner CISCO CCENT NetRider Indonesia',
+            'Completion of Oracle 10g 2 Day DBA',
+            '1st Winner Ma-Chung Algorithm Competition']
+        },
+        {
+          year: 2011,
+          descriptions: [
+            '1st Winner LKS Software Application Competition Indonesia',
+            '2nd Winner STIKI Student Programming Competition',
+            '2nd Winner LKS ICT Competition East Java'
+          ]
+        }
+      ]
     }
   },
   methods: {
@@ -278,6 +296,10 @@ ul > li {
 
 .card-content {
   margin-top: 15px;
+}
+
+.no-padding {
+  padding: 0;
 }
 </style>
 
