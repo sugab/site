@@ -157,52 +157,13 @@
 </template>
 
 <script>
+import achievements from '../assets/jsons/achievements.json'
+
 export default {
   data () {
     return {
       shows: [],
-      achievements: [
-        {
-          year: 2016,
-          descriptions: [
-            '1st Winner AMICTA Health and Wellbeing Apps'
-          ]
-        },
-        {
-          year: 2015,
-          descriptions: [
-            '1st Winner Grand Final Hackathon Merdeka 2.0 Indonesia',
-            '1st Winner Hackathon Merdeka 2.0 Indonesia Bandung Region'
-          ]
-        },
-        {
-          year: 2014,
-          descriptions: [
-            'Nominator INAICTA 2014 Games Competition'
-          ]
-        },
-        {
-          year: 2013,
-          descriptions: [
-            '2nd Winner SISFOTIME Web Design Competition'
-          ]
-        },
-        {
-          year: 2012,
-          descriptions: [
-            '3rd Winner CISCO CCENT NetRider Indonesia',
-            'Completion of Oracle 10g 2 Day DBA',
-            '1st Winner Ma-Chung Algorithm Competition']
-        },
-        {
-          year: 2011,
-          descriptions: [
-            '1st Winner LKS Software Application Competition Indonesia',
-            '2nd Winner STIKI Student Programming Competition',
-            '2nd Winner LKS ICT Competition East Java'
-          ]
-        }
-      ]
+      achievements: achievements
     }
   },
   methods: {
