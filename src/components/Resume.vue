@@ -18,7 +18,7 @@
               <div>
                 <b>{{ experience.location }}</b>
               </div>
-              <div>{{ experience.startDate }} - {{ experience.endDate }}</div>
+              <div>{{ experience.formattedStartDate }} - {{ experience.formattedEndDate }}</div>
             </div>
           </div>
         </div>
@@ -100,6 +100,7 @@
 </template>
 
 <script>
+import moment from 'moment'
 import achievements from '../assets/jsons/achievements.json'
 import experiences from '../assets/jsons/experiences.json'
 
@@ -107,7 +108,12 @@ export default {
   data () {
     return {
       achievements: achievements,
-      experiences: experiences
+      experiences: experiences.map((e) => {
+        e.formattedStartDate = moment(e.startDate).format('MMM YYYY')
+        e.formattedEndDate = e.endDate === 'Now' ? e.endDate : moment(e.endDate).format('MMM YYYY')
+
+        return e
+      })
     }
   }
 }
