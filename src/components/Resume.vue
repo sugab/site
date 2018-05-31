@@ -2,7 +2,7 @@
   <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
     <div class="content-wrapper">
       <template v-for="(experience, index) in experiences">
-        <div class="row" :key="index">
+        <div class="row">
           <div class="col-md-2 col-md-offset-1">
             <span class="section-title" v-if="index == 0">Work Experience</span>
           </div>
@@ -22,7 +22,7 @@
             </div>
           </div>
         </div>
-        <div class="row" :key="index">
+        <div class="row">
           <div class="col-md-6 col-md-offset-3">
             <ul class="clear">
               <li v-for="(description, index) in experience.descriptions" :key="index">
