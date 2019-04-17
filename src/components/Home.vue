@@ -15,7 +15,7 @@
         <div v-if="shows[2]">
           <div class="boxed long-text">
             <p>
-              I started coding when I was 15 years old. Right now I’m the youngest <b>Senior Software Engineer</b> at EACIIT Singapore. 
+              I started coding when I was 15 years old. Right now I’m one of the youngest <b>Senior Software Engineer</b> at EACIIT Vyasa Pte. Ltd. 
               I do beautiful magic stuff mainly using <b>JavaScript</b>, <b>Go</b>, <b>Python</b>, and <b>Swift (iOS)</b>.
             </p>
           </div>

@@ -55,6 +55,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <ul class="clear">
+            <li>Graduated with GPA 3.78 of 4.0</li>
             <li>Specialization in Machine Learning and Image Processing</li>
             <li>Research focus on PCO classification based on ultrasound image using Convolutional Neural Network and Speech recognition and classification of hijaiyah letter with haraakat with Prof. Adiwijaya and M. Syahrul Mubarok M. Sc.</li>
             <li>Publish machine learning paper on IEEE and present it at ICOICT 2017 Malaysia</li>
