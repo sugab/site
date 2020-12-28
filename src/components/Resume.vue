@@ -1,5 +1,8 @@
 <template>
-  <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+  <transition
+    enter-active-class="animated fadeInRight"
+    leave-active-class="animated fadeOutLeft"
+  >
     <div class="content-wrapper">
       <template v-for="(experience, index) in experiences">
         <div class="row">
@@ -8,7 +11,11 @@
           </div>
           <div class="col-md-6">
             <span class="float-right">
-              <img class="company-logo" :src="'/static/images/resume/' + experience.logo" alt="">
+              <img
+                class="company-logo"
+                :src="'/static/images/resume/' + experience.logo"
+                alt=""
+              />
             </span>
             <h1>{{ experience.title }}</h1>
             <h2>{{ experience.subtitle }}</h2>
@@ -18,14 +25,20 @@
               <div>
                 <b>{{ experience.location }}</b>
               </div>
-              <div>{{ experience.formattedStartDate }} - {{ experience.formattedEndDate }}</div>
+              <div>
+                {{ experience.formattedStartDate }} -
+                {{ experience.formattedEndDate }}
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
             <ul class="clear">
-              <li v-for="(description, index) in experience.descriptions" :key="index">
+              <li
+                v-for="(description, index) in experience.descriptions"
+                :key="index"
+              >
                 {{ description }}
               </li>
             </ul>
@@ -38,7 +51,11 @@
         </div>
         <div class="col-md-6">
           <span class="float-right">
-            <img class="company-logo" src="/static/images/resume/telu-logo.png" alt="">
+            <img
+              class="company-logo"
+              src="/static/images/resume/telu-logo.png"
+              alt=""
+            />
           </span>
           <h1>Telkom University</h1>
           <h2>Bachelor of Computer Science (B.Sc.)</h2>
@@ -57,8 +74,16 @@
           <ul class="clear">
             <li>Graduated with GPA 3.78 of 4.0</li>
             <li>Specialization in Machine Learning and Image Processing</li>
-            <li>Research focus on PCO classification based on ultrasound image using Convolutional Neural Network and Speech recognition and classification of hijaiyah letter with haraakat with Prof. Adiwijaya and M. Syahrul Mubarok M. Sc.</li>
-            <li>Publish machine learning paper on IEEE and present it at ICOICT 2017 Malaysia</li>
+            <li>
+              Research focus on PCO classification based on ultrasound image
+              using Convolutional Neural Network and Speech recognition and
+              classification of hijaiyah letter with haraakat with Prof.
+              Adiwijaya and M. Syahrul Mubarok M. Sc.
+            </li>
+            <li>
+              Publish machine learning paper on IEEE and present it at ICOICT
+              2017 Malaysia
+            </li>
             <li>Received full scholarship to pursue my specialization</li>
           </ul>
         </div>
@@ -68,7 +93,11 @@
           <span class="section-title">Achievement</span>
         </div>
         <div class="col-md-6">
-          <div class="col-md-6 no-padding" v-for="(achievement, index) in achievements" :key="index">
+          <div
+            class="col-md-6 no-padding"
+            v-for="(achievement, index) in achievements"
+            :key="index"
+          >
             <h3>{{ achievement.year }}</h3>
             <p v-for="(desc, index) in achievement.descriptions" :key="index">
               {{ desc }}
@@ -82,18 +111,14 @@
         </div>
         <div class="col-md-6">
           <h1>Language</h1>
-          <p>
-            Native in Bahasa Indonesia, fluent in English
-          </p>
+          <p>Native in Bahasa Indonesia, fluent in English</p>
           <h1>Technology</h1>
           <p>
-            Proficient in iOS Development using Swift, MongoDB, SQL Database, 
+            Proficient in iOS Development using Swift, MongoDB, SQL Database,
             JavaScript, Python, Go, Machine Learning, and Image Processing
           </p>
           <h1>Hobbies</h1>
-          <p>
-            Trekking, travelling, and adventure
-          </p>
+          <p>Trekking, travelling, and adventure</p>
         </div>
       </div>
     </div>
@@ -101,27 +126,31 @@
 </template>
 
 <script>
-import moment from 'moment'
-import achievements from '../assets/jsons/achievements.json'
-import experiences from '../assets/jsons/experiences.json'
+import moment from "moment";
+import achievements from "../assets/jsons/achievements.json";
+import experiences from "../assets/jsons/experiences.json";
 
 export default {
-  data () {
+  data() {
     return {
       achievements: achievements,
       experiences: experiences.map((e) => {
-        e.formattedStartDate = moment(e.startDate).format('MMM YYYY')
-        e.formattedEndDate = e.endDate === 'Now' ? e.endDate : moment(e.endDate).format('MMM YYYY')
+        e.formattedStartDate = moment(e.startDate).format("MMM YYYY");
+        e.formattedEndDate =
+          e.endDate === "Now"
+            ? e.endDate
+            : moment(e.endDate).format("MMM YYYY");
 
-        return e
-      })
-    }
-  }
-}
+        return e;
+      }),
+    };
+  },
+};
 </script>
 
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 
@@ -129,7 +158,8 @@ h1 {
   margin: 0;
 }
 
-h2, h3 {
+h2,
+h3 {
   margin-top: 0;
 }
 
@@ -146,7 +176,6 @@ ul.clear {
 
 ul > li {
   padding-bottom: 20px;
-  text-align: justify;
 }
 
 .content-wrapper {
