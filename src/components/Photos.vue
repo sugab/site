@@ -101,7 +101,7 @@ export default {
 
 .masonry-layout-panel__content {
   padding: 2px;
-  background-color: rgba($color: #000, $alpha: 0.5);
+  background-color: rgba($color: #000, $alpha: 0.7);
 }
 
 .masonry-layout-panel__content > a > img {

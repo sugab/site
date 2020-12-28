@@ -166,6 +166,7 @@ p {
   padding: 5%;
   text-align: right;
   overflow: hidden;
+  color: #fafafa;
 }
 
 .content-wrapper > div {
@@ -173,20 +174,20 @@ p {
 }
 
 .boxed {
-  background-color: rgba(236, 240, 241, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 5px;
 }
 
 .long-text {
   line-height: 2em;
-  margin: 40px 0 40px auto;
+  margin: 40px 10px 40px auto;
   max-width: 50%;
   font-size: 1.2em;
 }
 
 .long-text span {
   padding: 0.3em 0;
-  box-shadow: 10px 0 0px 0px rgba(236, 240, 241, 0.8), -10px 0 0px 0px rgba(236, 240, 241, 0.8);
+  box-shadow: 10px 0 0px 0px rgba(0, 0, 0, 0.7), -10px 0 0px 0px rgba(0, 0, 0, 0.7);
   box-decoration-break: clone;
 }
 
