@@ -1,123 +1,160 @@
 <template>
-  <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+  <transition
+    enter-active-class="animated fadeInRight"
+    leave-active-class="animated fadeOutLeft"
+  >
     <div class="content-wrapper">
-      <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+      <transition
+        enter-active-class="animated fadeInRight"
+        leave-active-class="animated fadeOutLeft"
+      >
         <div class="text" v-if="shows[0]">
-          <span class="title boxed">{{name}}</span>
+          <span class="title boxed">{{ name }}</span>
         </div>
       </transition>
-      <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+      <transition
+        enter-active-class="animated fadeInRight"
+        leave-active-class="animated fadeOutLeft"
+      >
         <div class="text" v-if="shows[1]">
-          <span class="subtitle boxed">Fullstack Developer, Data Geek, and Traveller</span>
+          <span class="subtitle boxed"
+            >Lead Software Engineer & ML Engineer</span
+          >
         </div>
       </transition>
-      <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+      <transition
+        enter-active-class="animated fadeInRight"
+        leave-active-class="animated fadeOutLeft"
+      >
         <div v-if="shows[2]">
-          <div class="boxed long-text">
+          <div class="long-text">
             <p>
-              I started coding when I was 15 years old. Right now I’m one of the youngest <b>Senior Software Engineer</b> at EACIIT Vyasa Pte. Ltd. 
-              I do beautiful magic stuff mainly using <b>JavaScript</b>, <b>Go</b>, <b>Python</b>, and <b>Swift (iOS)</b>.
+              <span class="boxed">
+                I started coding from high school and have a lot of experience
+                in software engineering. Was a full stack programmer but I want
+                to focus my skill to go and python. Love and have experience
+                doing data science and machine learning.
+              </span>
             </p>
           </div>
         </div>
       </transition>
-      <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+      <transition
+        enter-active-class="animated fadeInRight"
+        leave-active-class="animated fadeOutLeft"
+      >
         <div class="social-links" v-if="shows[3]">
           <span class="boxed">
-            <a class="social-link" href="https://github.com/sugab" target="_blank">
+            <a
+              class="social-link"
+              href="https://github.com/sugab"
+              target="_blank"
+            >
               <font-awesome-icon :icon="faGithub" />
               <b>github</b>
             </a>
           </span>
           <span class="boxed">
-            <a class="social-link" href="https://stackoverflow.com/users/903350/bagus-cahyono" target="_blank">
+            <a
+              class="social-link"
+              href="https://stackoverflow.com/users/903350/bagus-cahyono"
+              target="_blank"
+            >
               <font-awesome-icon :icon="faStackOverflow" />
               <b>stackoverflow</b>
             </a>
           </span>
           <span class="boxed">
-            <a class="social-link" href="https://www.linkedin.com/in/cahyonobagus" target="_blank">
+            <a
+              class="social-link"
+              href="https://www.linkedin.com/in/cahyonobagus"
+              target="_blank"
+            >
               <font-awesome-icon :icon="faLinkedin" />
               <b>linkedin</b>
             </a>
           </span>
           <span class="boxed">
-            <a class="social-link" href="mailto:baguscah77@gmail.com" target="_blank">
+            <a
+              class="social-link"
+              href="mailto:baguscah77@gmail.com"
+              target="_blank"
+            >
               <font-awesome-icon :icon="faEnvelope" />
               <b>baguscah77@gmail.com</b>
             </a>
           </span>
         </div>
-      </transition>   
-    </div> 
+      </transition>
+    </div>
   </transition>
 </template>
 
 <script>
-import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+import FontAwesomeIcon from "@fortawesome/vue-fontawesome";
 import {
   faGithub,
   faStackOverflow,
-  faLinkedin
-} from '@fortawesome/fontawesome-free-brands'
-import { faEnvelope } from '@fortawesome/fontawesome-free-solid'
+  faLinkedin,
+} from "@fortawesome/fontawesome-free-brands";
+import { faEnvelope } from "@fortawesome/fontawesome-free-solid";
 
 export default {
-  name: 'Home',
-  data () {
+  name: "Home",
+  data() {
     return {
-      name: 'Bagus Cahyono',
-      shows: [false, false, false, false]
-    }
+      name: "Bagus Cahyono",
+      shows: [false, false, false, false],
+    };
   },
   computed: {
-    faGithub () {
-      return faGithub
+    faGithub() {
+      return faGithub;
     },
-    faStackOverflow () {
-      return faStackOverflow
+    faStackOverflow() {
+      return faStackOverflow;
     },
-    faLinkedin () {
-      return faLinkedin
+    faLinkedin() {
+      return faLinkedin;
     },
-    faEnvelope () {
-      return faEnvelope
-    }
+    faEnvelope() {
+      return faEnvelope;
+    },
   },
   components: {
-    FontAwesomeIcon
+    FontAwesomeIcon,
   },
   methods: {
-    sequenceShow (show, callback) {
-      var promise = Promise.resolve()
+    sequenceShow(show, callback) {
+      var promise = Promise.resolve();
 
       for (const i of this.shows.keys()) {
         promise = promise.then(() => {
           return new Promise((resolve, reject) => {
             setTimeout(() => {
-              this.$set(this.shows, i, show)
-              resolve()
-            }, 100)
-          })
-        })
+              this.$set(this.shows, i, show);
+              resolve();
+            }, 100);
+          });
+        });
       }
 
-      if (typeof callback === 'function') {
+      if (typeof callback === "function") {
         promise.then(() => {
-          callback()
-        })
+          callback();
+        });
       }
-    }
+    },
   },
-  mounted () {
-    this.sequenceShow(true)
+  mounted() {
+    this.sequenceShow(true);
   },
-  beforeRouteLeave (to, from, next) {
+  beforeRouteLeave(to, from, next) {
     this.sequenceShow(false, function () {
-      next()
-    })
-  }
-}
+      next();
+    });
+  },
+};
 </script>
 
 <style scoped>
@@ -128,42 +165,39 @@ p {
 .content-wrapper {
   padding: 5%;
   text-align: right;
+  overflow: hidden;
+}
+
+.content-wrapper > div {
+  margin: 10px;
 }
 
 .boxed {
-  display: inline-block;
   background-color: rgba(236, 240, 241, 0.8);
-  padding: 5px 10px;
-  margin: 2px;
+  padding: 5px;
 }
 
 .long-text {
+  line-height: 2em;
+  margin: 40px 0 40px auto;
   max-width: 50%;
-  margin: 40px 0;
   font-size: 1.2em;
-  padding-top: 10px;
-  padding-bottom: 10px;
+}
+
+.long-text span {
+  padding: 0.3em 0;
+  box-shadow: 10px 0 0px 0px rgba(236, 240, 241, 0.8), -10px 0 0px 0px rgba(236, 240, 241, 0.8);
+  box-decoration-break: clone;
 }
 
 .social-link {
   padding-left: 4px;
-}
-
-.social-link > b {
-  display: inline-block;
-  max-width: 0px;
-  overflow: hidden;
-  transition: all 1s ease;
-}
-
-.social-link:hover > b {
-  max-width: 200px;
+  font-size: 0.9em;
 }
 
 @media (max-width: 540px) {
   .long-text {
     max-width: 100%;
-    margin: 40px 0;
     font-size: 1.2em;
   }
 }
