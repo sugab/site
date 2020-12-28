@@ -193,7 +193,9 @@ p {
 
 .social-link {
   padding-left: 4px;
+  padding-bottom: 14px;
   font-size: 0.9em;
+  display: inline-block;
 }
 
 @media (max-width: 540px) {
