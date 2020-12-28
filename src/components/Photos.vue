@@ -1,15 +1,24 @@
 <template>
-  <transition enter-active-class="animated fadeInRight" leave-active-class="animated fadeOutLeft">
+  <transition
+    enter-active-class="animated fadeInRight"
+    leave-active-class="animated fadeOutLeft"
+  >
     <div>
       <div class="masonry-layout">
-        <transition-group enter-active-class="animated fadeInDown" leave-active-class="animated fadeOutUp">
-          <div class="masonry-layout-panel" v-for="photo in photos" :key="photo.link">
+        <transition-group
+          enter-active-class="animated fadeInDown"
+          leave-active-class="animated fadeOutUp"
+        >
+          <div
+            class="masonry-layout-panel"
+            v-for="photo in photos"
+            :key="photo.link"
+          >
             <div class="masonry-layout-panel__content">
               <a :href="photo.link" target="_blank">
                 <img :src="photo.media.o" />
               </a>
-              <h3>{{ photo.title }}</h3>
-              <p>{{ photo.descriptionText }}</p>
+              <p>{{ photo.title }}</p>
             </div>
           </div>
         </transition-group>
@@ -19,37 +28,43 @@
 </template>
 
 <script>
-import jsonp from 'jsonp'
+import jsonp from "jsonp";
 export default {
-  data () {
+  data() {
     return {
-      photos: []
-    }
+      photos: [],
+    };
   },
-  created () {
-    const url = 'https://api.flickr.com/services/feeds/photos_public.gne?id=162284319@N03&format=json&jsoncallback=callback'
-    jsonp(url, {name: 'callback'}, (error, data) => {
+  created() {
+    const url =
+      "https://api.flickr.com/services/feeds/photos_public.gne?id=162284319@N03&format=json&jsoncallback=callback";
+    jsonp(url, { name: "callback" }, (error, data) => {
       if (!error) {
-        var photos = data.items.map(e => {
-          let lastIndex = e.description.lastIndexOf('<p>')
-          e.descriptionText = e.description.substring(lastIndex + 3, e.description.length - 4)
-          e.media.o = e.media.m.substr(0, e.media.m.length - 6) + e.media.m.substr(e.media.m.length - 4, e.media.m.length)
+        var photos = data.items.map((e) => {
+          let lastIndex = e.description.lastIndexOf("<p>");
+          e.descriptionText = e.description.substring(
+            lastIndex + 3,
+            e.description.length - 4
+          );
+          e.media.o =
+            e.media.m.substr(0, e.media.m.length - 6) +
+            e.media.m.substr(e.media.m.length - 4, e.media.m.length);
 
-          return e
-        })
+          return e;
+        });
 
-        this.photos = photos
+        this.photos = photos;
       }
-    })
+    });
   },
-  beforeRouteLeave (to, from, next) {
-    this.photos = []
+  beforeRouteLeave(to, from, next) {
+    this.photos = [];
 
     setTimeout(() => {
-      next()
-    }, 600)
-  }
-}
+      next();
+    }, 600);
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -61,19 +76,19 @@ export default {
   column-count: 1;
   column-gap: 0;
   counter-reset: item-counter;
-  
+
   @media screen and (min-width: 400px) {
     column-count: 2;
   }
-  
+
   @media screen and (min-width: 600px) {
     column-count: 3;
   }
-  
+
   @media screen and (min-width: 800px) {
     column-count: 4;
   }
-  
+
   @media screen and (min-width: 1100px) {
     column-count: 5;
   }
@@ -86,7 +101,7 @@ export default {
 
 .masonry-layout-panel__content {
   padding: 2px;
-  background-color: white;
+  background-color: rgba($color: #000, $alpha: 0.5);
 }
 
 .masonry-layout-panel__content > a > img {
@@ -96,8 +111,8 @@ export default {
 }
 
 .masonry-layout-panel__content > p {
-  margin: 10px;
-  margin-top: 0;
+  margin: 5px;
+  color: white;
 }
 
 .masonry-layout-panel__content > h3 {
