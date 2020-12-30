@@ -74,16 +74,6 @@
               <b>linkedin</b>
             </a>
           </span>
-          <span class="boxed">
-            <a
-              class="social-link"
-              href="mailto:baguscah77@gmail.com"
-              target="_blank"
-            >
-              <font-awesome-icon :icon="faEnvelope" />
-              <b>baguscah77@gmail.com</b>
-            </a>
-          </span>
         </div>
       </transition>
     </div>
@@ -193,7 +183,7 @@ p {
 
 .social-link {
   padding-left: 4px;
-  padding-bottom: 14px;
+  padding-bottom: 1.1em;
   font-size: 0.9em;
   display: inline-block;
 }
