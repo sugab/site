@@ -31,9 +31,7 @@
             <p>
               <span class="boxed">
                 I started coding from high school and have a lot of experience
-                in software engineering. Was a full stack programmer but I want
-                to focus my skill to go and python. Love and have experience
-                doing data science and machine learning.
+                in software engineering. Was a full stack programmer but now focusing in Go. 
               </span>
             </p>
           </div>
@@ -81,70 +79,70 @@
 </template>
 
 <script>
-import FontAwesomeIcon from "@fortawesome/vue-fontawesome";
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 import {
   faGithub,
   faStackOverflow,
-  faLinkedin,
-} from "@fortawesome/fontawesome-free-brands";
-import { faEnvelope } from "@fortawesome/fontawesome-free-solid";
+  faLinkedin
+} from '@fortawesome/fontawesome-free-brands'
+import { faEnvelope } from '@fortawesome/fontawesome-free-solid'
 
 export default {
-  name: "Home",
-  data() {
+  name: 'Home',
+  data () {
     return {
-      name: "Bagus Cahyono",
-      shows: [false, false, false, false],
-    };
+      name: 'Bagus Cahyono',
+      shows: [false, false, false, false]
+    }
   },
   computed: {
-    faGithub() {
-      return faGithub;
+    faGithub () {
+      return faGithub
     },
-    faStackOverflow() {
-      return faStackOverflow;
+    faStackOverflow () {
+      return faStackOverflow
     },
-    faLinkedin() {
-      return faLinkedin;
+    faLinkedin () {
+      return faLinkedin
     },
-    faEnvelope() {
-      return faEnvelope;
-    },
+    faEnvelope () {
+      return faEnvelope
+    }
   },
   components: {
-    FontAwesomeIcon,
+    FontAwesomeIcon
   },
   methods: {
-    sequenceShow(show, callback) {
-      var promise = Promise.resolve();
+    sequenceShow (show, callback) {
+      var promise = Promise.resolve()
 
       for (const i of this.shows.keys()) {
         promise = promise.then(() => {
           return new Promise((resolve, reject) => {
             setTimeout(() => {
-              this.$set(this.shows, i, show);
-              resolve();
-            }, 100);
-          });
-        });
+              this.$set(this.shows, i, show)
+              resolve()
+            }, 100)
+          })
+        })
       }
 
-      if (typeof callback === "function") {
+      if (typeof callback === 'function') {
         promise.then(() => {
-          callback();
-        });
+          callback()
+        })
       }
-    },
+    }
   },
-  mounted() {
-    this.sequenceShow(true);
+  mounted () {
+    this.sequenceShow(true)
   },
-  beforeRouteLeave(to, from, next) {
+  beforeRouteLeave (to, from, next) {
     this.sequenceShow(false, function () {
-      next();
-    });
-  },
-};
+      next()
+    })
+  }
+}
 </script>
 
 <style scoped>

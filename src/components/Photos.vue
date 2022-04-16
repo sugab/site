@@ -28,43 +28,43 @@
 </template>
 
 <script>
-import jsonp from "jsonp";
+import jsonp from 'jsonp'
 export default {
-  data() {
+  data () {
     return {
-      photos: [],
-    };
+      photos: []
+    }
   },
-  created() {
+  created () {
     const url =
-      "https://api.flickr.com/services/feeds/photos_public.gne?id=162284319@N03&format=json&jsoncallback=callback";
-    jsonp(url, { name: "callback" }, (error, data) => {
+      'https://api.flickr.com/services/feeds/photos_public.gne?id=162284319@N03&format=json&jsoncallback=callback'
+    jsonp(url, { name: 'callback' }, (error, data) => {
       if (!error) {
         var photos = data.items.map((e) => {
-          let lastIndex = e.description.lastIndexOf("<p>");
+          let lastIndex = e.description.lastIndexOf('<p>')
           e.descriptionText = e.description.substring(
             lastIndex + 3,
             e.description.length - 4
-          );
+          )
           e.media.o =
             e.media.m.substr(0, e.media.m.length - 6) +
-            e.media.m.substr(e.media.m.length - 4, e.media.m.length);
+            e.media.m.substr(e.media.m.length - 4, e.media.m.length)
 
-          return e;
-        });
+          return e
+        })
 
-        this.photos = photos;
+        this.photos = photos
       }
-    });
+    })
   },
-  beforeRouteLeave(to, from, next) {
-    this.photos = [];
+  beforeRouteLeave (to, from, next) {
+    this.photos = []
 
     setTimeout(() => {
-      next();
-    }, 600);
-  },
-};
+      next()
+    }, 600)
+  }
+}
 </script>
 
 <style lang="scss" scoped>
