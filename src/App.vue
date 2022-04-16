@@ -160,17 +160,20 @@ html {
     display: inline-block;
     list-style: none;
     padding: 0.6em 1em;
-    color: white;
     transition: color 1s;
     border-top: 2px solid transparent;
   }
+
+  .menu li a {
+    color: white;
+  };
 
   .menu li.active {
     font-weight: bold;
     border-top: 2px solid white;
   }
 
-  .header.light .menu li {
+  .header.light .menu li a {
     color: #6c7a89;
   }
 
