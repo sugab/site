@@ -32,6 +32,8 @@
               <span class="boxed">
                 I started coding from high school and have a lot of experience
                 in software engineering. Was a full stack programmer but now focusing in Go. 
+                Build and manage various project with microservice architecture, processing big data, 
+                integrating with other services, fine tuning code and query.
               </span>
             </p>
           </div>
