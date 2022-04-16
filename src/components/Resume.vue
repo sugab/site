@@ -5,7 +5,7 @@
   >
     <div class="content-wrapper">
       <template v-for="(experience, index) in experiences">
-        <div class="row">
+        <div class="row" v-bind:key="index">
           <div class="col-md-2 col-md-offset-1">
             <span class="section-title" v-if="index == 0">Work Experience</span>
           </div>
@@ -32,7 +32,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row" v-bind:key="index">
           <div class="col-md-6 col-md-offset-3">
             <ul class="clear">
               <li
@@ -202,7 +202,9 @@ ul > li {
 .company-logo {
   float: left;
   width: 50px;
-  margin-right: 20px;
+  width: 4em;
+  height: 4em;
+  object-fit: contain;
 }
 
 .card-content {
