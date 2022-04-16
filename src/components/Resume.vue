@@ -214,5 +214,11 @@ ul > li {
 .no-padding {
   padding: 0;
 }
+
+@media only screen and (min-width : 480px) {
+  .company-logo {
+    margin-right: 20px;
+  }
+}
 </style>
 

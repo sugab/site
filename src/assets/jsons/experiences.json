@@ -1,10 +1,22 @@
 [
   {
+    "title": "Coins.ph",
+    "subtitle": "Software Engineer - Integration Team",
+    "location": "Singapore / Philippines (Remote)",
+    "startDate": "2021-12-01",
+    "endDate": "Now",
+    "logo": "coinsph-logo.png",
+    "descriptions": [
+      "Managing all intergration services, make sure all code well tested and running smoothly in every env.",
+      ""
+    ]
+  },
+  {
     "title": "Kano Teknologi Utama",
     "subtitle": "Lead Software Engineer & Data Scientist",
     "location": "Surabaya, Indonesia",
     "startDate": "2020-04-01",
-    "endDate": "Now",
+    "endDate": "2021-11-01",
     "logo": "kano-logo.png",
     "descriptions": [
       "Lead development team to complete the software development requirements in a limited time frame and worked closely with Business Analyst and SME to ensure correct business logic",
@@ -45,7 +57,7 @@
     "subtitle": "iOS Programmer",
     "location": "Anywhere",
     "startDate": "2014-01-01",
-    "endDate": "Now",
+    "endDate": "2017-12-01",
     "logo": "bc-logo.png",
     "descriptions": [
       "Worked on the below Projects:",

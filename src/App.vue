@@ -107,7 +107,7 @@ html {
     bottom: 0;
     left: 0;
     background-image: url("https://farm5.staticflickr.com/4766/39796659631_f58963260e_k.jpg");
-    background-position: center;
+    background-position: 25% 0%;
     background-repeat: no-repeat;
     background-size: cover;
     transition: background 1s;

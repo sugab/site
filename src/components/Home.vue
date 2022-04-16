@@ -18,7 +18,7 @@
       >
         <div class="text" v-if="shows[1]">
           <span class="subtitle boxed"
-            >Lead Software Engineer & ML Engineer</span
+            >Software Engineer (Go)</span
           >
         </div>
       </transition>
