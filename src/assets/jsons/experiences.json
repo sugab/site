@@ -4,12 +4,13 @@
     "subtitle": "Software Engineer - Integration Team",
     "location": "Singapore / Philippines (Remote)",
     "startDate": "2021-12-01",
-    "endDate": "Now",
+    "endDate": "Present",
     "logo": "coinsph-logo.png",
     "descriptions": [
-      "Integrating with various partners including bank, telco, payment gateway, billing, merchant, etc.",
-      "Responsible for managing all intergration services, make sure all code well tested and running smoothly in every environment",
-      "Support operation and finance team doing automation to make reconciliation and audit transaction effective and efficient"
+      "Integrating with various partners including banks, telco, google play, payment gateways, merchants, etc.",
+      "Support operation and finance team to automate reconciliation and audit transactions",
+      "Responsible for managing all integration services, make sure all code well tested and running smoothly in every environment",
+      "Key projects: Integrating with Instapay P2M, Enabling QRPH transaction, creating voucher service for generate and redeem crypto voucher."
     ]
   },
   {
@@ -23,7 +24,7 @@
       "Lead development team to complete the software development requirements in a limited time frame and worked closely with Business Analyst and SME to ensure correct business logic",
       "Responsible for the whole engineering process such as gathering requirements, architecture design, programming and code review, automated testing, and also the CI/CD & cloud management (DevOps)",
       "Gathered, cleaned, and analyzed data given from client and build model to give insight about the data and build machine learning application based on client requirement",
-      "Notable projects: Mining, Fleet and Crew Management for Petrosea, PowerBI custom dashboard for UOB, Truck forecasting for Terminal Teluk Lamong, Supply chain dashboard for Philip Morris International"
+      "Key projects: Mining, Fleet and Crew Management for Petrosea, PowerBI custom dashboard for UOB, Truck forecasting for Terminal Teluk Lamong, Supply chain dashboard for Philip Morris International"
     ]
   },
   {
@@ -37,7 +38,7 @@
       "Lead development team to complete the software development requirements in a limited time frame and worked closely with Business Analyst and SME to ensure correct business logic",
       "Part of the Centre of Excellence team, responsible for helping the team to resolve any critical issues, performance tuning, code review, and refactoring for all products on the entire engineering department",
       "Data wrangling from various resources and perform logical operation to summarize this data so it can be visualized to support decision making",
-      "Notable projects: Various dashboard portal for Standard Chartered Bank, NYSE Stock Market Dashboard, Procurement dashboard for NatSteel Holdings"
+      "Key projects: Various dashboard portal for Standard Chartered Bank, NYSE Stock Market Dashboard, Procurement dashboard for NatSteel Holdings"
     ]
   },
   {

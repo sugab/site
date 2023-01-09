@@ -30,10 +30,9 @@
           <div class="long-text">
             <p>
               <span class="boxed">
-                I started coding from high school and have a lot of experience
-                in software engineering. Was a full stack programmer but now focusing in Go. 
-                Build and manage various project with microservice architecture, processing big data, 
-                integrating with other services, fine tuning code and query.
+                Experienced software engineer with 5+ years focusing in Golang. 
+                Build and lead various project with microservice architecture, processing big data, 
+                integrating with third party services, fine tuning code and query.
               </span>
             </p>
           </div>
